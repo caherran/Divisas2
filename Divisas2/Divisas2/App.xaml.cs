@@ -11,7 +11,7 @@ namespace Divisas2
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new DivisasPage();
         }
 
         protected override void OnStart()

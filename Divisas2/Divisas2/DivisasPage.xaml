@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Divisas2.DivisasPage">
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout Padding="10,20,10,10" Spacing="10">
+                <Label Text="Divisas"
+                       Font="30"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Center" />
+                <Label Text="Ingrese valor, seleccione la moneda origen, la moneda destino y presione el boton de 'Convertir'"
+                       Font="20"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Center" />
+                <Entry x:Name="amountEntry"
+                       Placeholder="Ingrese valor a convertir"
+                       FontSize="20"
+                       Keyboard="Numeric"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="Center"/>
+                <Picker x:Name="sourcePicker"
+                        Title="Seleccione moneda origen"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"/>
+                <Picker x:Name="targetPicker"
+                        Title="Seleccione moneda destino"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"/>
+                <Button x:Name="convertButton"
+                        Text="Convertir"
+                        FontSize="20"
+                        BackgroundColor="Yellow"
+                        TextColor="Black"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center"/>
+                <ActivityIndicator x:Name="waitActivityIndicator"
+                                   IsRunning="False"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"/>
+                <Label x:Name="convertedLabel"
+                       FontSize="20"
+                       BackgroundColor="LightGray"
+                       TextColor="Navy"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="FillAndExpand"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
